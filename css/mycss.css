@@ -43,6 +43,48 @@ body {
   header {
     width: 1200px; height: 100px;
   }
+/* 헤더 메뉴 */
+#topmenu {
+  height: 60px;
+}
+#topmenu > li {
+  float: left;
+  position: relative;
+}
+#topmenu > li > a {
+  display: block;   /* 링크 태그 블록 스타일 */
+  color: black;   /* 폰트 색상 */
+  font-weight: 600; /* 폰트 굵기 */
+}
+#topmenu > li > a:hover {
+  color: blue;
+}
+/* 서브 메뉴 */
+#topmenu > li > ul {
+  display: none;
+  position: absolute;
+  width: 348px;
+  left: 28px;
+  /* 배경색 투명하게 */
+  background-color: rgb(181,142,49,0.9);
+  left: 0;
+  margin: 0;
+}
+  #topmenu > li > ul > li {
+    padding: 10px 10px 10px 10px;
+  }
+  #topmenu > li > ul > li > a {
+    font-size: 24px;
+    padding: 15px 115px 15px 115px;
+    color: black;
+  }
+  #topmenu > li:hover > ul {
+    display: block;
+    z-index: 10px; /* 슬라이드 이미지 위에 표시 */
+  }
+  #topmenu > li > ul > li > a:hover {
+    color: #f00;
+  }
 
   figure {
     width: 1200px; height: 200px;
@@ -50,6 +92,7 @@ body {
   #titleimage {
     width: 700px; height: 200px;
     float: left;
+    overflow: hidden;
   }
     #titleimage > img {
       width: 700px; height: 200px;
@@ -62,92 +105,121 @@ body {
      width: 500px; height: 200px;
     }
 
+
     /* 메인 */
   main {
     width: 1200px; height: 600px;
   }
 
-  #tabmenu {
+  /* 탭 메뉴 */
+  #tabMenu{
     width: 898px; height: 600px;
     border-left: 1px solid black;
     float: left;
-  }
-    #tabmenu > input[type="radio"] {
-      display: none;
-    }
-    #tabmenu > label {
+}
+#tabMenu input[type="radio"]{
+    display: none;
+}
+#tabMenu label{
       width: 297px; height: 100px;
       border: 1px solid black;
       float: left;
       line-height: 100px;
       text-align: center;
-    }
-    #tabmenu > label:hover {
-      background-color: #eee;
-      cursor: pointer;
-    }
-
-    #tabmenu input:checked + label {
-      border : 1px solid black;
-      background-color: gray;
-  }
-
-  .tab1 {
-    display: none;
+}
+#tabMenu label:hover{
+    background-color: #eee;
+    cursor: pointer;
+}
+#tabMenu input:checked+label{
+    color: #b00;
     border: 1px solid #ddd;
-  }
- 
-  #noodle > ul > li {
-   margin: 10px;
-   display: inline-block;
-   margin: 40px 0px 0px 70px;
-   text-align: center;
-  }
-  #noodle > ul > li > img {
-    width: 200px; height: 150px;
-    margin-top: 10px;
-  }
+    background-color: #eee;
+}
+.tab{
+    display: none;
+    border-top:1px solid #ddd;
+    text-align: center; 
+}
+.tab >ul >li >img{
+    border-radius: 10%;
+}
+#noodle > ul > li{
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+}
+p{
+    font-size: 20px;
+}
+#rice > ul > li {
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+    margin-top: 140px;
+}
+#juice > ul > li {
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+    margin-top: 100px;
+}
+#tab1:checked~#noodle,
+#tab2:checked~#rice,
+#tab3:checked~#juice{
+    display: block;
+}
 
-  #rice > ul > li {
-   margin: 10px;
-   display: inline-block;
-   text-align: center;
-   margin: 140px 0px 0px 70px;
-  }
-  #rice > ul > li > img {
-    width: 200px; height: 150px;
-    margin-top: 10px;
-  }
-
- #juice > ul > li {
-   margin: 10px;
-   display: inline-block;
-   text-align: center;
-   margin: 140px 0px 0px 70px;
- }
-
- #juice > ul > li > img {
-  width: 200px; height: 180px;
-  margin-top: 10px;
-  
- }
-
- #tab1:checked ~ #noodle,
- #tab2:checked ~ #rice,
- #tab3:checked ~ #juice {
-   display: block;
- }
-
- /* 주문내역 */
-  #basket {
+#basket{
     width: 299px; height: 600px;
     border: 1px solid black;
+    border-bottom: none;
     float: left;
-  }
-
-  /* 푸터 */
-  footer {
-    width: 1200px; height: 100px;
-    border: 1px solid black;
     text-align: center;
-  }
+    position: relative;
+}
+
+#basket > h1 {
+  margin-top: 30px;
+}
+
+#basket > #order {
+  margin-top: 30px;
+}
+
+#total {
+position: absolute;
+bottom: 50px;
+left: 110px;
+}
+
+#on {
+ position: absolute;
+ left: 0px;
+ bottom: 0px;
+ width: 150px;
+}
+
+#off {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 150px;
+}
+
+div > ul > li > p > button {
+  width: 50px;
+}
+
+footer {
+  width: 1200px; height: 100px;
+  text-align: center;
+  background-color: rgb(181,142,49,0.9);
+}
+footer > div { 
+  float: right;
+  transform: translate(-15px,-45px);
+}
+footer > div > img {
+  width: 70px; height: 70px;
+}
