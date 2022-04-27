@@ -13,8 +13,6 @@ function Slide() {
   setTimeout(Slide, 3000);  
 }
 
-
-
 let price;
 let result = 0;
 let count1;
