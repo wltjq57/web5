@@ -55,67 +55,67 @@ function plus1(count1,price) {
   result += parseInt(price);
   result1 += parseInt(count1);
   document.querySelector("#order1").innerText = "잔치국수 " + result1 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 function plus2(count2,price) {
   result += parseInt(price);
   result2 += parseInt(count2);
   document.querySelector("#order2").innerText = "비빔국수 " + result2 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 function plus3(count3,price) {
   result += parseInt(price);
   result3 += parseInt(count3);
   document.querySelector("#order3").innerText = "냉면 " + result3 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 function plus4(count4,price) {
   result += parseInt(price);
   result4 += parseInt(count4);
   document.querySelector("#order4").innerText = "간장비빔국수 " + result4 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 function plus5(count5,price) {
   result += parseInt(price);
   result5 += parseInt(count5);
   document.querySelector("#order5").innerText = "우동 " + result5 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 function plus6(count6,price) {
   result += parseInt(price);
   result6 += parseInt(count6);
   document.querySelector("#order6").innerText = "불고기 덮밥 " + result6 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 function plus7(count7,price) {
   result += parseInt(price);
   result7 += parseInt(count7);
   document.querySelector("#order7").innerText = "제육 덮밥 " + result7 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 function plus8(count8,price) {
   result += parseInt(price);
   result8 += parseInt(count8);
   document.querySelector("#order8").innerText = "참치 주먹밥 " + result8 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 function plus9(count9,price) {
   result += parseInt(price);
   result9 += parseInt(count9);
   document.querySelector("#order9").innerText = "코카콜라 " + result9 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 function plus10(count10,price) {
   result += parseInt(price);
   result10 += parseInt(count10);
   document.querySelector("#order10").innerText = "스프라이트 " + result10 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 function plus11(count11,price) {
   result += parseInt(price);
   result11 += parseInt(count11);
   document.querySelector("#order11").innerText = "환타 " + result11 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
 function minus1(count1,price) {
@@ -128,7 +128,7 @@ function minus1(count1,price) {
   }
   else
   document.querySelector("#order1").innerText = "잔치국수 " + result1 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 function minus2(count2,price) {
   if(result2>=1){
@@ -140,7 +140,7 @@ if(result2==0){
 }
 else
   document.querySelector("#order2").innerText = "비빔국수 " + result2 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 function minus3(count3,price) {
   if(result3>=1){
@@ -152,7 +152,7 @@ if(result3==0){
 }
 else
   document.querySelector("#order3").innerText = "냉면 " + result3 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 function minus4(count4,price) {
   if(result4>=1){
@@ -164,7 +164,7 @@ if(result4==0){
 }
 else
   document.querySelector("#order4").innerText = "간장비빔국수 " + result4 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 function minus5(count5,price) {
   if(result5>=1){
@@ -176,7 +176,7 @@ if(result5==0){
 }
 else
   document.querySelector("#order5").innerText = "우동 " + result5 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 function minus6(count6,price) {
   if(result6>=1){
@@ -188,7 +188,7 @@ if(result6==0){
 }
 else
   document.querySelector("#order6").innerText = "불고기 덮밥 " + result6 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 function minus7(count7,price) {
   if(result7>=1){
@@ -200,7 +200,7 @@ if(result7==0){
 }
 else
   document.querySelector("#order7").innerText = "제육 덮밥 " + result7 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 function minus8(count8,price) {
   if(result8>=1){
@@ -212,7 +212,7 @@ if(result8==0){
 }
 else
   document.querySelector("#order8").innerText = "참치 주먹밥 " + result8 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 function minus9(count9,price) {
   if(result9>=1){
@@ -224,7 +224,7 @@ if(result9==0){
 }
 else
   document.querySelector("#order9").innerText = "코카콜라 " + result9 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 function minus10(count10,price) {
   if(result10>=1){
@@ -236,7 +236,7 @@ if(result10==0){
 }
 else
   document.querySelector("#order10").innerText = "스프라이트 " + result10 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 function minus11(count11,price) {
   if(result11>=1){
@@ -248,7 +248,7 @@ function minus11(count11,price) {
   }
   else
   document.querySelector("#order11").innerText = "환타 " + result11 ;
-  document.querySelector("#total").innerText = result + "원";
+  document.querySelector("#total").innerText = result.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",") + "원";
 }
 
 function reset() {
